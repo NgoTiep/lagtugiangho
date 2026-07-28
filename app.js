@@ -78,3 +78,66 @@ function finishExam() {
     <p>Pass Grade: 70%</p>
   `;
 }
+function submitExam() {
+  // 1. Ẩn thẻ làm bài quiz, hiện thẻ kết quả
+  document.getElementById("quiz-card").classList.add("hidden");
+  
+  const resultCard = document.getElementById("result-card");
+  if (resultCard) resultCard.classList.remove("hidden");
+
+  // 2. Tìm hoặc tạo khu vực hiển thị chi tiết câu trả lời
+  let reviewContainer = document.getElementById("review-container");
+  if (!reviewContainer) {
+    reviewContainer = document.createElement("div");
+    reviewContainer.id = "review-container";
+    if (resultCard) resultCard.appendChild(reviewContainer);
+  }
+
+  reviewContainer.innerHTML = "<h2>Chi tiết bài làm:</h2>";
+
+  // 3. Duyệt qua từng câu hỏi để kiểm tra Đúng/Sai
+  currentExamQuestions.forEach((q, idx) => {
+    const userSelected = userAnswers[idx] || []; // Mảng chỉ số đáp án người dùng chọn
+    const correctAnswers = q.correctAnswers;    // Mảng chỉ số đáp án đúng từ questions.js
+
+    // Kiểm tra xem người dùng trả lời đúng hoàn toàn hay không
+    const isCorrect = userSelected.length === correctAnswers.length && 
+                      userSelected.every(val => correctAnswers.includes(val));
+
+    const qBox = document.createElement("div");
+    qBox.style.margin = "15px 0";
+    qBox.style.padding = "10px";
+    qBox.style.border = "1px solid #ccc";
+    qBox.style.borderRadius = "6px";
+    qBox.style.backgroundColor = isCorrect ? "#e6fffa" : "#fff5f5";
+
+    // CHỈ HIỂN THỊ NỘI DUNG CÂU HỎI (Không kèm chữ Câu X hay Question X)
+    let htmlContent = `<p style="font-weight: bold;">${q.question}</p><ul>`;
+
+    q.options.forEach((opt, optIdx) => {
+      const isSelected = userSelected.includes(optIdx);
+      const isAnsCorrect = correctAnswers.includes(optIdx);
+
+      let colorStyle = "color: #333;";
+      let tag = "";
+
+      if (isAnsCorrect) {
+        colorStyle = "color: green; font-weight: bold;";
+        tag = " ✓ (Đáp án đúng)";
+      } else if (isSelected && !isAnsCorrect) {
+        colorStyle = "color: red; font-weight: bold;";
+        tag = " ✗ (Bạn đã chọn sai)";
+      }
+
+      htmlContent += `<li style="${colorStyle}">${opt} ${tag}</li>`;
+    });
+
+    htmlContent += `</ul>`;
+    htmlContent += `<p style="font-weight:bold; color:${isCorrect ? 'green' : 'red'};">
+                      ${isCorrect ? '✓ Đúng' : '✗ Sai'}
+                    </p>`;
+
+    qBox.innerHTML = htmlContent;
+    reviewContainer.appendChild(qBox);
+  });
+}
