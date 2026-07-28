@@ -794,12 +794,12 @@ const questionBank = [
     id: 71,
     question: "Match up the following roles a mediator plays with its description: \"Problem and resource explorer\"",
     options: [
-      "Especially the case in circumstances where s/he has substantial professional expertise and knowledge that may have a direct bearing on the mode of resolution and dispute",
+      "Help the parties find pathways to innovative perspectives and solutions.",
       "Remind parties of the risks and costs of possible solutions, as well as their opportunities",
       "Regulate behaviours and avoid any excesses that can be unproductive or dysfunctional during the sessions.",
-      "Help the parties find pathways to innovative perspectives and solutions."
+      "Especially the case in circumstances where s/he has substantial professional expertise and knowledge that may have a direct bearing on the mode of resolution and dispute"
     ],
-    correctAnswers: [3],
+    correctAnswers: [0],
     type: "single"
   },
   {
