@@ -1143,4 +1143,3 @@ const questionBank = [
     type: "single"
   }
 ];
-
