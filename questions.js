@@ -1144,4 +1144,3 @@ const questionBank = [
   }
 ];
 
-export default questions;
