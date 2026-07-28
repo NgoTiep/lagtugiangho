@@ -27,8 +27,22 @@ function showQuestion(index) {
   
   const optionsDiv = document.getElementById("options-container");
   optionsDiv.innerHTML = "";
+  const optionsDiv = document.getElementById("options-container");
+  optionsDiv.innerHTML = "";
+  const opts = q.options || q.choices || q.answers || [];
+  opts.forEach((opt, optIndex) => {
+    const btn = document.createElement("div");
+    btn.className = "option-item"; // Hoặc class CSS tương ứng của dự án bạn
+  const selected = (userAnswers[currentIndex] || []).includes(optIndex);
+    if (selected) btn.classList.add("selected");
+    btn.innerHTML = `
+      <input type="${isMultiple ? 'checkbox' : 'radio'}" name="option" ${selected ? 'checked' : ''}>
+      <span>${opt}</span>
+    `;
+    btn.onclick = () => selectOption(optIndex, isMultiple);
+    optionsDiv.appendChild(btn);
+  });
   const inputType = isMultiple ? "checkbox" : "radio";
-
   q.options.forEach((opt, optIndex) => {
     const isChecked = userAnswers[currentIndex]?.includes(optIndex) ? "checked" : "";
     optionsDiv.innerHTML += `
