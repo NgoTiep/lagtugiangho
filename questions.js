@@ -1,4 +1,3 @@
-// questions.js
 const questions = [
   {
     id: 1,
