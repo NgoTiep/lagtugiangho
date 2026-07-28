@@ -4,13 +4,22 @@ let userAnswers = {};
 const QUESTIONS_PER_EXAM = 50;
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("total-q").innerText = questionBank.length;
-  document.getElementById("exam-q").innerText = Math.min(QUESTIONS_PER_EXAM, questionBank.length);
+  if (typeof questionBank !== "undefined") {
+    document.getElementById("total-q").innerText = questionBank.length;
+    document.getElementById("exam-q").innerText = Math.min(QUESTIONS_PER_EXAM, questionBank.length);
+  }
 });
 
 function startExam() {
+  if (typeof questionBank === "undefined" || questionBank.length === 0) {
+    alert("Không tìm thấy dữ liệu câu hỏi trong questionBank!");
+    return;
+  }
+
   let shuffled = [...questionBank].sort(() => 0.5 - Math.random());
   currentExamQuestions = shuffled.slice(0, QUESTIONS_PER_EXAM);
+  userAnswers = {};
+
   document.getElementById("welcome-card").classList.add("hidden");
   document.getElementById("quiz-card").classList.remove("hidden");
   showQuestion(0);
@@ -19,51 +28,57 @@ function startExam() {
 function showQuestion(index) {
   currentIndex = index;
   const q = currentExamQuestions[index];
-  document.getElementById("question-number").innerText = `Question ${index + 1} of ${currentExamQuestions.length}`;
+
+  // 1. Ẩn chữ "Question X of Y" (Để trống theo yêu cầu)
+  const qNumElem = document.getElementById("question-number");
+  if (qNumElem) qNumElem.innerText = "";
+
+  // 2. Hiển thị nội dung câu hỏi
   document.getElementById("question-text").innerText = q.question;
-  
-  const isMultiple = q.correct.length > 1;
-  document.getElementById("select-type-badge").innerText = isMultiple ? "Select all that apply" : "Select one answer";
-  
+
+  // 3. Xử lý loại câu hỏi (Single hay Multiple)
+  const correctArr = q.correctAnswers || q.correct || [];
+  const isMultiple = q.type === "multiple" || correctArr.length > 1;
+
+  const badgeElem = document.getElementById("select-type-badge");
+  if (badgeElem) {
+    badgeElem.innerText = isMultiple ? "Select all that apply" : "Select one answer";
+  }
+
+  // 4. Render danh sách đáp án linh hoạt (hỗ trợ cả options, choices, answers)
   const optionsDiv = document.getElementById("options-container");
   optionsDiv.innerHTML = "";
-  const optionsDiv = document.getElementById("options-container");
-  optionsDiv.innerHTML = "";
+  
   const opts = q.options || q.choices || q.answers || [];
-  opts.forEach((opt, optIndex) => {
-    const btn = document.createElement("div");
-    btn.className = "option-item"; // Hoặc class CSS tương ứng của dự án bạn
-  const selected = (userAnswers[currentIndex] || []).includes(optIndex);
-    if (selected) btn.classList.add("selected");
-    btn.innerHTML = `
-      <input type="${isMultiple ? 'checkbox' : 'radio'}" name="option" ${selected ? 'checked' : ''}>
-      <span>${opt}</span>
-    `;
-    btn.onclick = () => selectOption(optIndex, isMultiple);
-    optionsDiv.appendChild(btn);
-  });
   const inputType = isMultiple ? "checkbox" : "radio";
-  q.options.forEach((opt, optIndex) => {
-    const isChecked = userAnswers[currentIndex]?.includes(optIndex) ? "checked" : "";
+
+  opts.forEach((opt, optIndex) => {
+    const isChecked = (userAnswers[currentIndex] || []).includes(optIndex) ? "checked" : "";
+    
     optionsDiv.innerHTML += `
-      <label class="option-item">
-        <span>${opt}</span>
+      <label class="option-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; cursor: pointer;">
         <input type="${inputType}" name="option" value="${optIndex}" ${isChecked} onchange="saveAnswer()">
+        <span>${opt}</span>
       </label>
     `;
   });
 
+  // 5. Nút bấm Chuyển câu / Nộp bài
+  const nextBtn = document.getElementById("next-btn");
+  const submitBtn = document.getElementById("submit-btn");
+
   if (index === currentExamQuestions.length - 1) {
-    document.getElementById("next-btn").classList.add("hidden");
-    document.getElementById("submit-btn").classList.remove("hidden");
+    if (nextBtn) nextBtn.classList.add("hidden");
+    if (submitBtn) submitBtn.classList.remove("hidden");
   } else {
-    document.getElementById("next-btn").classList.remove("hidden");
-    document.getElementById("submit-btn").classList.add("hidden");
+    if (nextBtn) nextBtn.classList.remove("hidden");
+    if (submitBtn) submitBtn.classList.add("hidden");
   }
 }
 
 function saveAnswer() {
-  const selected = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(cb => parseInt(cb.value));
+  const selected = Array.from(document.querySelectorAll('input[name="option"]:checked'))
+                        .map(cb => parseInt(cb.value));
   userAnswers[currentIndex] = selected;
 }
 
@@ -73,33 +88,45 @@ function nextQuestion() {
   }
 }
 
-function finishExam() {
+function prevQuestion() {
+  if (currentIndex > 0) {
+    showQuestion(currentIndex - 1);
+  }
+}
+
+// Hàm Nộp Bài & Tính Điểm & Chi Tiết Đáp Án
+function submitExam() {
   let score = 0;
+
+  // 1. Tính điểm
   currentExamQuestions.forEach((q, idx) => {
-    const userAns = (userAnswers[idx] || []).sort().join(',');
-    const correctAns = [...q.correct].sort().join(',');
-    if (userAns === correctAns) score++;
+    const userSelected = userAnswers[idx] || [];
+    const correctArr = q.correctAnswers || q.correct || [];
+
+    const isCorrect = userSelected.length === correctArr.length &&
+                      userSelected.every(val => correctArr.includes(val));
+    if (isCorrect) score++;
   });
 
   const percentage = Math.round((score / currentExamQuestions.length) * 100);
   const passed = percentage >= 70;
 
+  // 2. Chuyển thẻ giao diện
   document.getElementById("quiz-card").classList.add("hidden");
-  document.getElementById("result-card").classList.remove("hidden");
-  document.getElementById("score-box").innerHTML = `
-    <h2>${passed ? "🎉 PASSED!" : "❌ FAILED"}</h2>
-    <p>Your Score: <b>${score}/${currentExamQuestions.length}</b> (${percentage}%)</p>
-    <p>Pass Grade: 70%</p>
-  `;
-}
-function submitExam() {
-  // 1. Ẩn thẻ làm bài quiz, hiện thẻ kết quả
-  document.getElementById("quiz-card").classList.add("hidden");
-  
   const resultCard = document.getElementById("result-card");
   if (resultCard) resultCard.classList.remove("hidden");
 
-  // 2. Tìm hoặc tạo khu vực hiển thị chi tiết câu trả lời
+  // 3. Hiển thị tổng kết điểm
+  const scoreBox = document.getElementById("score-box");
+  if (scoreBox) {
+    scoreBox.innerHTML = `
+      <h2>${passed ? "🎉 PASSED!" : "❌ FAILED"}</h2>
+      <p>Your Score: <b>${score}/${currentExamQuestions.length}</b> (${percentage}%)</p>
+      <p>Pass Grade: 70%</p>
+    `;
+  }
+
+  // 4. Render khu vực Xem lại bài làm (Chi tiết Đúng / Sai từng câu)
   let reviewContainer = document.getElementById("review-container");
   if (!reviewContainer) {
     reviewContainer = document.createElement("div");
@@ -107,51 +134,58 @@ function submitExam() {
     if (resultCard) resultCard.appendChild(reviewContainer);
   }
 
-  reviewContainer.innerHTML = "<h2>Chi tiết bài làm:</h2>";
+  reviewContainer.innerHTML = "<h2 style='margin-top:20px;'>Chi tiết bài làm:</h2>";
 
-  // 3. Duyệt qua từng câu hỏi để kiểm tra Đúng/Sai
   currentExamQuestions.forEach((q, idx) => {
-    const userSelected = userAnswers[idx] || []; // Mảng chỉ số đáp án người dùng chọn
-    const correctAnswers = q.correctAnswers;    // Mảng chỉ số đáp án đúng từ questions.js
+    const userSelected = userAnswers[idx] || [];
+    const correctArr = q.correctAnswers || q.correct || [];
+    const opts = q.options || q.choices || q.answers || [];
 
-    // Kiểm tra xem người dùng trả lời đúng hoàn toàn hay không
-    const isCorrect = userSelected.length === correctAnswers.length && 
-                      userSelected.every(val => correctAnswers.includes(val));
+    const isCorrect = userSelected.length === correctArr.length &&
+                      userSelected.every(val => correctArr.includes(val));
 
     const qBox = document.createElement("div");
     qBox.style.margin = "15px 0";
-    qBox.style.padding = "10px";
+    qBox.style.padding = "15px";
     qBox.style.border = "1px solid #ccc";
-    qBox.style.borderRadius = "6px";
+    qBox.style.borderRadius = "8px";
+    qBox.style.textAlign = "left";
     qBox.style.backgroundColor = isCorrect ? "#e6fffa" : "#fff5f5";
 
-    // CHỈ HIỂN THỊ NỘI DUNG CÂU HỎI (Không kèm chữ Câu X hay Question X)
-    let htmlContent = `<p style="font-weight: bold;">${q.question}</p><ul>`;
+    // Chỉ hiển thị nội dung câu hỏi
+    let htmlContent = `<p style="font-weight: bold; font-size: 16px;">${q.question}</p><ul style="list-style-type: none; padding-left: 0;">`;
 
-    q.options.forEach((opt, optIdx) => {
+    opts.forEach((opt, optIdx) => {
       const isSelected = userSelected.includes(optIdx);
-      const isAnsCorrect = correctAnswers.includes(optIdx);
+      const isAnsCorrect = correctArr.includes(optIdx);
 
       let colorStyle = "color: #333;";
       let tag = "";
 
       if (isAnsCorrect) {
-        colorStyle = "color: green; font-weight: bold;";
+        colorStyle = "color: #28a745; font-weight: bold;";
         tag = " ✓ (Đáp án đúng)";
       } else if (isSelected && !isAnsCorrect) {
-        colorStyle = "color: red; font-weight: bold;";
+        colorStyle = "color: #dc3545; font-weight: bold;";
         tag = " ✗ (Bạn đã chọn sai)";
       }
 
-      htmlContent += `<li style="${colorStyle}">${opt} ${tag}</li>`;
+      htmlContent += `<li style="${colorStyle} margin: 5px 0;">
+                        ${isSelected ? '🔘' : '⚪'} ${opt} ${tag}
+                      </li>`;
     });
 
     htmlContent += `</ul>`;
-    htmlContent += `<p style="font-weight:bold; color:${isCorrect ? 'green' : 'red'};">
-                      ${isCorrect ? '✓ Đúng' : '✗ Sai'}
+    htmlContent += `<p style="font-weight:bold; color:${isCorrect ? '#28a745' : '#dc3545'}; margin-top: 8px;">
+                      Kết quả: ${isCorrect ? '✓ Đúng' : '✗ Sai'}
                     </p>`;
 
     qBox.innerHTML = htmlContent;
     reviewContainer.appendChild(qBox);
   });
+}
+
+// Khai báo alias để không bị lỗi nếu HTML gọi nhầm finishExam()
+function finishExam() {
+  submitExam();
 }
