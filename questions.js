@@ -1,4 +1,4 @@
-const questions = [
+const questionBank = [
   {
     id: 1,
     question: "In preparing for your negotiation, objectives and interests must be taken into account. However, what are the two potential pitfalls in these?",
