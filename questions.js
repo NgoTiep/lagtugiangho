@@ -32,7 +32,7 @@ const questionBank = [
       "The mandate is: my boss expects I go at least that far, and I must absolutely not step over this red line.",
       "The mandate is: my boss sets me a bottom-line set of objectives and expects me to give it that extra bit of energy and commitment to obtain more than what was expected."
     ],
-    correctAnswers: [0, 2],
+    correctAnswers: [1, 2],
     type: "multiple"
   },
   {
@@ -87,7 +87,7 @@ const questionBank = [
       "Help you maintain the relationship with the other side: \"I'm not saying no, but facts X and Y justify that we do not include this option in the deal\".",
       "Provide a springboard for exploring other, legitimately anchored solutions."
     ],
-    correctAnswers: [0, 2, 3],
+    correctAnswers: [2, 3],
     type: "multiple"
   },
   {
@@ -252,7 +252,7 @@ const questionBank = [
       "Negotiators start with excessive demands which cannot be met.",
       "The plan B has been underestimated."
     ],
-    correctAnswers: [0, 2, 3],
+    correctAnswers: [0, 2],
     type: "multiple"
   },
   {
@@ -317,7 +317,7 @@ const questionBank = [
       "What we should do first things first in negotiation is the essential.",
       "Everything can be negotiated."
     ],
-    correctAnswers: [0, 4],
+    correctAnswers: [0, 4, 5],
     type: "multiple"
   },
   {
@@ -331,7 +331,7 @@ const questionBank = [
       "Identify the best solution away from the table before negotiating.",
       "Always end a negotiation with an agreement and accept it."
     ],
-    correctAnswers: [0, 3, 4],
+    correctAnswers: [0, 4],
     type: "multiple"
   },
   {
@@ -381,7 +381,7 @@ const questionBank = [
       "My lips are sealed",
       "The \"icing on the cake\""
     ],
-    correctAnswers: [4, 7],
+    correctAnswers: [2, 4, 7],
     type: "multiple"
   },
   {
@@ -392,7 +392,7 @@ const questionBank = [
       "First, resist hasty reaction and instead compare with your best solution away from the table. Next, thank your opposite for the offer and then propose a higher figure than your Plan B, as your own \"last offer\".",
       "Remain calm and do not give way to pressure, do not mix the People and the Problem. Stick to the facts and insist on rules of the game. Finally, if your plan “B”’ enables it, leave the room in the first meeting."
     ],
-    correctAnswers: [2],
+    correctAnswers: [1],
     type: "single"
   },
   {
@@ -416,8 +416,8 @@ const questionBank = [
       "Avoids personal anecdotes, and refrains from questions regarding private and family aspects of his/her counterpart.",
       "Tries to start the discussion on a first-name basis."
     ],
-    correctAnswers: [2],
-    type: "single"
+    correctAnswers: [0, 1],
+    type: "multiple"
   },
   {
     id: 38,
@@ -450,7 +450,7 @@ const questionBank = [
       "The negotiator from the high context culture, because he will be forced to reveal more information than he feels comfortable with, to make written commitments and adopt a quick style of making deals that are all in conflict with his cultural habits.",
       "Neither of them. indeed, aside from being from cultural backgrounds that are different, both of them developed professionally in a global company with its own internal culture. They will find common ground to negotiate this deal without a glitch."
     ],
-    correctAnswers: [1],
+    correctAnswers: [0],
     type: "single"
   },
   {
@@ -479,7 +479,7 @@ const questionBank = [
     id: 43,
     question: "For Hall, how would a negotiator from a ‘polychronic’ culture perceive the negotiation style of someone from a ‘monochronic’ one? Which statement best fit your impression?",
     options: [
-      "\"This person is always looking at her watch, she probably likes it very much and wants me to notice it\".",
+      "This person is always looking at her watch, she probably likes it very much and wants me to notice it.",
       "This person is constantly looking at her watch. I wonder if maybe she needs to leave this meeting to attend to other more pressing business. I should tell her that I can wait for her, or that we could reconvene at another time. I too have other projects to take care of.",
       "She keeps looking at her watch, she must be in a rush to finish this deal. Ok, time to hurry up. I can make things easier for her."
     ],
@@ -510,7 +510,7 @@ const questionBank = [
   },
   {
     id: 46,
-    question: "Which “experience” would you be best advised not to repeat?",
+    question: "While in the air, you look back on some of the previous experiences you’ve had conducting negotiations in different cultural contexts. Trial-and-error has always been a way to progress, but one has to try to not repeat the same ones. Which “experience” would you be best advised not to repeat?",
     options: [
       "A few years ago, while attempting to create a good atmosphere before a hard negotiation...",
       "A while back, you were a junior associate at the time... wore your best wax shirt, bought last summer in Senegal...",
@@ -543,7 +543,7 @@ const questionBank = [
   },
   {
     id: 49,
-    question: "In which of the following three cases do you consider the approach adopted to be coherent with the details of the situations:",
+    question: "Knowing what path to follow is always tricky and depends much on your own capacity to assess your level of comfort as a cross-cultural negotiator. For instance, In which of the following three cases do you consider the approach adopted to be coherent with the details of the situations:",
     options: [
       "You are a recent French hire in a top American company...",
       "You've lived in Japan for the best part of three years now... recommend they let you be the go-between...",
@@ -565,7 +565,7 @@ const questionBank = [
   },
   {
     id: 51,
-    question: "Based on your understanding of cultural profiling, in which of the following countries are you most likely to be facing a negotiator who will not be the actual final decision-maker:",
+    question: "Preparing yourself for cross-cultural negotiations involves taking into account many steps and avoiding many traps. For the latter, being as clear a picture as can be about the decision-making process is an important asset. Based on your understanding of cultural profiling, in which of the following countries are you most likely to be facing a negotiator who will not be the actual final decision-maker:",
     options: [
       "Belgium, France and Germany: in Europe, negotiators are always the final bosses...",
       "China, Singapore and Korea: mainly collectivistic, these countries are very much driven by 'supreme leaders' who remains silent or absent during talks.",
@@ -605,8 +605,8 @@ const questionBank = [
       "Personality",
       "Assumptions"
     ],
-    correctAnswers: [0, 1, 2, 3],
-    type: "multiple"
+    correctAnswers: [0],
+    type: "single"
   },
   {
     id: 55,
@@ -616,7 +616,7 @@ const questionBank = [
       "Intractable decision-making processes",
       "Bribery and corruption"
     ],
-    correctAnswers: [2],
+    correctAnswers: [0],
     type: "single"
   },
   {
@@ -728,8 +728,8 @@ const questionBank = [
       "The mediator facilitates the growth of improved mutual understanding between the parties",
       "The mediator will step out of his/her neutral stance if necessary."
     ],
-    correctAnswers: [4],
-    type: "single"
+    correctAnswers: [1, 4],
+    type: "multiple"
   },
   {
     id: 66,
@@ -739,8 +739,8 @@ const questionBank = [
       "The mediator perceives that either one of the parties is deliberately blocking a solution through stalling tactics.",
       "The mediator perceives that one or both of the parties are beginning to resort to conflictual tactics to push through their goals."
     ],
-    correctAnswers: [0, 1, 2],
-    type: "multiple"
+    correctAnswers: [1],
+    type: "single"
   },
   {
     id: 67,
@@ -811,7 +811,7 @@ const questionBank = [
       "Help them transcend rigid or over-dogmatic positions.",
       "Break out of norms that inhibit the finding of creative solutions to problems."
     ],
-    correctAnswers: [0],
+    correctAnswers: [3],
     type: "single"
   },
   {
@@ -1071,8 +1071,8 @@ const questionBank = [
       "Mediation with a third-party eliminates strikes",
       "Mediation is less costly than both strike action and going through industrial tribunals and courts"
     ],
-    correctAnswers: [0, 3],
-    type: "multiple"
+    correctAnswers: [3],
+    type: "single"
   },
   {
     id: 96,
@@ -1084,7 +1084,7 @@ const questionBank = [
       "They must be perceived as skilled and reliable",
       "They must be perceived as neutral"
     ],
-    correctAnswers: [1, 3, 4],
+    correctAnswers: [0, 1, 3, 4],
     type: "multiple"
   },
   {
@@ -1095,7 +1095,7 @@ const questionBank = [
       "The goal is to reach an agreement or deal that will keep the parties away from litigation and the courts. Here the mediator may be rather more directive in approach and style, and is really trying to “negotiate for the parties”, with the constraints of law in mind.",
       "The goal is to maintain the relationship between the parties while initiating a process of dialogue between them that can generate a solution which they feel they can “own”. This is close to the mediation “facilitator-communicator” role."
     ],
-    correctAnswers: [0],
+    correctAnswers: [2],
     type: "single"
   },
   {
@@ -1118,7 +1118,7 @@ const questionBank = [
       "Unions see third parties as a way for management to keep its distance and to avoid direct negotiation",
       "Unions will often fear being by-passed or co-opted by a process where, at the end of the day, employees are poorly represented"
     ],
-    correctAnswers: [1, 4],
+    correctAnswers: [0, 1, 2, 3, 4],
     type: "multiple"
   },
   {
