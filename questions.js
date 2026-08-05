@@ -317,7 +317,7 @@ const questionBank = [
       "What we should do first things first in negotiation is the essential.",
       "Everything can be negotiated."
     ],
-    correctAnswers: [0, 4, 5],
+    correctAnswers: [0, 3, 4],
     type: "multiple"
   },
   {
