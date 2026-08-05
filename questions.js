@@ -1169,11 +1169,11 @@ const questionBank = [
   },
   {
     id: 104,
-    question: "Many people believe that negotiation is only, and always, about concession-making, thinking that it can only be a zero-sum game. The reality is different. How?",
+    question: "Many people believe that negotiation is only, and always, about concession-making, thinking that it can only be a “zero-sum game”: “What he wins, I must lose”, and vice versa. The reality is quite different. How?",
     options: [
-      "No concessions should be made.",
+      "No concessions should be made. Like this, the negotiators do not fall into the trap of believing they must lose something in order to win something.",
       "Negotiation can help you create value without the obligation to take it from the other, but create it with the support of the other because there is a notion of reciprocity.",
-      "Negotiation is always about concessions because there are naturally stronger and weaker negotiators.",
+      "Negotiation is always about concessions because there are naturally stronger and weaker negotiators at the table in any deal.",
     ],
     correctAnswers: [1],
     type: "single"
@@ -1182,14 +1182,14 @@ const questionBank = [
     id: 105,
     question: "'Business is business!' This attitude invariably leads to rejection of a deal. Why?",
     options: [
-      "The proposal stems from a process in which they felt respected, had a say, could voice their concerns.",
+      "The proposal stems from of a process in which they felt respected, had a say, could voice their concerns.",
       "The proposal stems from a process characterised by use of force, impoliteness, competition, and which they felt uncomfortable with.",
-      "The proposal stems from talks centred only on the financial aspect of a deal, not logistics or after-sales follow up.",
+      "The proposal stems from talks which are only centred on the financial aspect of a deal not the logistical or after-sales follow up.",
     ],
     correctAnswers: [1],
     type: "single"
   },
-    {
+  {
     id: 106,
     question: "'Which mindset most defines a positive negotiating approach?",
     options: [
@@ -1324,27 +1324,16 @@ const questionBank = [
   },
   {
    id: 116,
-   question: "Among the actions listed below, which one should you take when faced with the 'ultimatum' tactic your opposite might use?",
-   options: [
-     "Re-orient your opposite to the points initially agreed or gain time to assess the meaning and cost of the new item.",
-     "Resist hasty reaction, compare with your best solution away from the table, thank your opposite, and propose a higher figure than your Plan B as your own last offer.",
-     "Remain calm, do not give way to pressure, do not mix the People and the Problem, stick to facts and rules, and leave if your Plan B enables it.",
-   ],
-   correctAnswers: [1],
-   type: "single"
-  },
-  {
-   id: 117,
    question: "Which statement is right?",
    options: [
-     "In an age of globalization, culture has become a vestige of the past.",
+     "In an age of globalization, “culture” has become a vestige of the past that is expressed most clearly in areas such as national cuisine and traditional costume. Other than that, we all belong to a mostly globalized culture.",
      "When negotiating with someone from a different culture, I have to pay attention to the various ways in which my interlocutor conveys what he or she thinks of his/her positions.",
    ],
    correctAnswers: [1],
    type: "single"
   },
   {
-   id: 118,
+   id: 117,
    question: "Which of these statements are true?",
    options: [
      "Spanish negotiators from the IMF have an advantage over Indian negotiators working for the UN.",
@@ -1356,62 +1345,62 @@ const questionBank = [
    type: "multiple"
   },
   {
-   id: 119,
-   question: "Based on Dr Hofstede's profiling of cultures, what is the correct definition of his 'power distance index'?",
+   id: 118,
+   question: "Based on your understanding of Dr Hofstede’s profiling of cultures, what is to you the correct definition of his “power distance index”?",
    options: [
-     "A measurement of the distance with which members of a society are comfortable based on hierarchical position.",
-     "The PDI accounts for the way members within a society accept and expect power and authority to be distributed and therefore how decisions are made.",
-     "The PDI indicates how much hierarchy weighs in decision-making. When PDI is low, hierarchy predominates.",
+     "The PDI is a measurement, across different cultures, of the distance with which members of a society are comfortable based on their hierarchical position.",
+     "The PDI accounts for the way in which members within a given society accept and expect power and authority to be distributed and therefore how decisions are made.",
+     "The PDI indicates how much hierarchy weighs in the decision-making process. When the PDI is low, hierarchy predominates as the ultimate criterion for making a decision.",
    ],
    correctAnswers: [1],
    type: "single"
   },
   {
-   id: 120,
-   question: "Hofstede's cultural classification helps understand hidden cultural complexity. Which statements ring true?",
+   id: 119,
+   question: "Hofstede’s view of cultural classification criteria enables students of cross-cultural negotiations to get a deeper understanding of what shapes a foreign negotiator’s preferences, tactics and sets of attitudes at the table. When one looks ‘under the water level of the iceberg of culture’, one can discover the hidden complexities of culture. Among the following statements, which ones ring true to you ?",
    options: [
-     "You win, you lose, that is life. Chinese and American cultures do not mind taking risks because they have a very short-term view.",
-     "Culturally-expressed preferences can come from radically different historical sources; Chinese and American low risk aversion may stem from different histories.",
-     "France is relatively risk-averse; French planning and risk prevention are embodied in social welfare institutions.",
+     "You win, you lose, that’s life. Members of Chinese and American cultures do not mind taking risks because they have a very short term view and do not consider the future or the past to be important.",
+     "Culturally-expressed preferences can come from radically different historical sources: for instance, Chinese and American cultures tend to display a low risk aversion level. In China, it may stem from the collective nature of agricultural work which required a system of ‘solidarity’ to manage certain risks. In America, the low risk aversion level may come from an ethic of belief in oneself and in second chances.",
+     "France is a relatively risk-averse society. The French rely on planning to avoid risks and have developed a system of “risk prevention” embodied in an elaborate system of social welfare. Its culture is thus expressed in a very visible social institution.",
    ],
    correctAnswers: [1, 2],
    type: "multiple"
   },
   {
-   id: 121,
+   id: 120,
    question: "Choose the statement that best describes what Earley means by 'the physical element of cultural intelligence'.",
    options: [
-     "Cultures are expressed through shared verbal and nonverbal signifiers; cultural intelligence implies familiarity with these means of transmitting information.",
-     "It means capacity to survive physically.",
-     "Adopting a traditional dress code shows very high physical cultural intelligence.",
+     "Cultures are expressed through a set of shared verbal and nonverbal signifiers through which a group of people communicate. Therefore, cultural intelligence implies a high degree of familiarity with verbal and nonverbal means of transmitting information.",
+     "It means the capacity to survive in any environment by adopting the habits of locals.",
+     "Adopting a traditional dress code can be understood as showing very high physical cultural intelligence.",
+   ],
+   correctAnswers: [0],
+   type: "single"
+  },
+  {
+   id: 121,
+   question: "Someone with high cultural intelligence would be best described by which of the following statements:",
+   options: [
+     "Someone with a sharpened cultural intelligence is able to suspend his judgement and analyse a behavior or interaction to determine whether it depends on personalities, a specific group trait or more largely a group’s cultural attributes.",
+     "An individual who is able to understand and be understood in various cultural settings.",
+     "A man or woman who has studied extensively how to negotiate and have his/her point accepted by others.",
    ],
    correctAnswers: [0],
    type: "single"
   },
   {
    id: 122,
-   question: "Someone with high cultural intelligence would be best described by which statement?",
-   options: [
-     "Someone able to suspend judgement and analyse whether behaviour depends on personalities, a specific group trait, or broader cultural attributes.",
-     "An individual able to understand and be understood in various cultural settings.",
-     "A person who studied extensively how to negotiate and have his/her point accepted.",
-   ],
-   correctAnswers: [0],
-   type: "single"
-  },
-  {
-   id: 123,
    question: "What use does a negotiator have for cultural intelligence in a culturally-different setting?",
    options: [
-     "Knowledge is power: impress your counterpart by telling them you have been to his country.",
-     "It helps carefully assess negotiation strategy and sequencing based on understanding the counterpart's cultural profile, avoiding obvious mistakes.",
-     "It increases self-confidence for the financial obligations part of negotiation.",
+     "Knowledge is power: impress your counterpart by telling them you’ve been to his country.",
+     "It will provide much needed help in carefully assessing your negotiation strategy and sequencing, based on your understanding of your counterpart’s cultural profile. You’ll avoid obvious mistakes that can ruin first impressions.",
+     "It provides a basis for increased self-confidence, which will come in handy when getting to the hardest part of the negotiation on financial obligations.",
    ],
    correctAnswers: [1],
    type: "single"
   },
   {
-   id: 124,
+   id: 123,
    question: "Negotiators from monochronic cultures tend to:",
    options: [
      "Be comfortable with a high flow of information.",
@@ -1422,7 +1411,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 125,
+   id: 124,
    question: "What should a negotiator do when negotiating with polychronic negotiators?",
    options: [
      "Taking time commitments seriously.",
@@ -1434,23 +1423,23 @@ const questionBank = [
    type: "multiple"
   },
   {
-   id: 126,
-   question: "When preparing for negotiation with a negotiator from a culture a priori different from yours, what would you be well-advised to do?",
+   id: 125,
+   question: "When preparing for your next negotiation with a negotiator from a culture, a priori different from yours, what would you be well-advised to do?",
    options: [
-     "Read up on national culture to sound sensitive.",
-     "Check yourself: what do you think a typical individual from that culture would be like? Are you certain your assumptions are correct?",
+     "Read-up on his or her national culture to sound sensitive. Are you certain you’re up-to-date on his/her country’s main traits?",
+     "Check yourself: what do you think a typical individual from his/her culture would be like? Are you certain your assumptions are correct?",
      "Work on your notes, know your file, rehearse your arguments. A negotiator is a negotiator after all.",
    ],
    correctAnswers: [1],
    type: "single"
   },
   {
-   id: 127,
-   question: "You prepared for negotiation with Japanese counterparts based on high-context negotiation in Asia, but a last-minute check requires reassessment. What news derailed your plan?",
+   id: 126,
+   question: "Images and reality can sometimes suffer when they meet each other. You’ve been getting ready for this negotiation with your Japanese counterparts for a long time. You even followed specific training on “how to negotiate in Asia” at ESSEC. But, after a last minute check, your strategy has to be reassessed. What type of news derailed your well-thought plan?",
    options: [
-     "The Japanese counterpart's company was acquired by another Japanese challenger.",
-     "Each counterpart's team member attended a business school in France and graduated last year.",
-     "You were about to forget your preparation notes on your desk.",
+     "Your Japanese counterpart’s company was just acquired by another japanese challenger.",
+     "You checked each of your counterpart’s team members’ profile on a professional social network and realized that each of them attended a business school in France and graduated last year.",
+     "You were about to forget your preparation notes on your desk",
    ],
    correctAnswers: [1],
    type: "single"
