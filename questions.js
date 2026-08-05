@@ -1141,5 +1141,318 @@ const questionBank = [
     ],
     correctAnswers: [0],
     type: "single"
-  }
+  },
+   {
+    id: 102,
+    question: "Among the following statements, which is (are) not pitfalls in negotiation?",
+    options: [
+      "Absence of a learning cycle",
+      "Negomania",
+      "Justifications of solutions",
+      "Positionalism",
+      "Multiple solutions"
+    ],
+    correctAnswers: [2, 4],
+    type: "multiple"
+  },
+  {
+    id: 103,
+    question: "What typical assumptions can be found among negotiators?",
+    options: [
+      "We naturally assume that negotiating is all about brain rather than brawn",
+      "We naturally tend to underestimate the other side at the table.",
+      "We always tend to assume that the other side is stronger than us.",
+      "We naturally tend to think that negotiation is only, and always, pure competition and that the objective is to win against the other.",
+    ],
+    correctAnswers: [1, 4],
+    type: "multiple"
+  },
+  {
+    id: 104,
+    question: "Many people believe that negotiation is only, and always, about concession-making, thinking that it can only be a zero-sum game. The reality is different. How?",
+    options: [
+      "No concessions should be made.",
+      "Negotiation can help you create value without the obligation to take it from the other, but create it with the support of the other because there is a notion of reciprocity.",
+      "Negotiation is always about concessions because there are naturally stronger and weaker negotiators.",
+    ],
+    correctAnswers: [1],
+    type: "single"
+  },
+  {
+    id: 105,
+    question: "'Business is business!' This attitude invariably leads to rejection of a deal. Why?",
+    options: [
+      "The proposal stems from a process in which they felt respected, had a say, could voice their concerns.",
+      "The proposal stems from a process characterised by use of force, impoliteness, competition, and which they felt uncomfortable with.",
+      "The proposal stems from talks centred only on the financial aspect of a deal, not logistics or after-sales follow up.",
+    ],
+    correctAnswers: [1],
+    type: "single"
+  },
+    {
+    id: 106,
+    question: "'Which mindset most defines a positive negotiating approach?",
+    options: [
+      "Hard on the problem, hard on people",
+      "Soft on the problem, hard on people",
+      "Hard on the problem, soft on people",
+      "Soft on people, soft on the problem",
+    ],
+    correctAnswers: [2],
+    type: "single"
+  },
+  {
+    id: 107,
+    question: "Among the following elements, which are the ones that are not part of the 10-trump plan for preparation?",
+    options: [
+      "Vertical relationships",
+      "Logistics",
+      "Communication",
+      "Justifications away from the table",
+      "Positions",
+    ],
+    correctAnswers: [3, 4],
+    type: "multiple"
+  },
+  {
+   id: 108,
+   question: "For the dimension 'Who' (People) to be prepared in negotiation, which of the following are key trumps?",
+   options: [
+     "The mandate",
+     "Solutions under the table",
+     "Interpersonal relationships",
+     "Stakeholders' map",
+     "Personal motivations",
+   ],
+   correctAnswers: [0, 2, 3],
+   type: "multiple"
+  },
+  {
+   id: 109,
+   question: "Justifications are most convincing if they are:",
+   options: [
+     "Based on a precedent",
+     "Based on emotions",
+     "Based on benchmarks and statistics",
+     "Based on the law",
+     "Based on relationships",
+   ],
+   correctAnswers: [0, 2, 3],
+   type: "multiple"
+  },
+  {
+   id: 110,
+   question: "In the case of excess demands, what is the solution?",
+   options: [
+     "Plan better and anticipate deadlines.",
+     "Back up demands with objective justifications using benchmarks and facts.",
+     "Counter these demands with your own excess demands to test your opponent.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+    {
+   id: 110,
+   question: "You notice that the lighting is poor and the noise from outside is making things difficult to follow. What do you do?",
+   options: [
+     "Ask people to begin speaking loudly, even if it means shouting.",
+     "Postpone the meeting until another day.",
+     "Take the logistics seriously. Stop proceedings, find a better place and book a new room.",
+   ],
+   correctAnswers: [2],
+   type: "single"
+  },
+   {
+   id: 111,
+   question: "When preparing your process, which one of the following is not one of the classifications of motivations you should take into account?",
+   options: [
+     "Motivations shared by both parties and compatible between them.",
+     "Motivations that are different, contradictory or even mutually exclusive.",
+     "Motivations that are contradictory to the win-win mindset of the negotiation.",
+     "Motivations that are different but compatible or complementary.",
+   ],
+   correctAnswers: [2],
+   type: "single"
+  },
+  {
+   id: 112,
+   question: "Among the following statements, which are correct in negotiation?",
+   options: [
+     "In negotiation, you should know how to evaluate before deciding.",
+     "The essential is to speak well first and then to listen.",
+     "Creating value before sharing it.",
+     "Negotiation is an innate skill.",
+     "What you should do first is the obvious.",
+   ],
+   correctAnswers: [0, 2],
+   type: "multiple"
+  },
+  {
+   id: 113,
+   question: "A negotiation does not imply an agreement. You therefore have to check the dimensions of the negotiation before commitment. In the 'Problem' dimension, which of the following statements is wrong?",
+   options: [
+     "Check that the agreement integrates the motivations of the different parties.",
+     "Check that it is less interesting than the best solution away from the table.",
+     "Check that solutions at the table create as much value as possible.",
+     "Check that the organization clearly determines the execution steps.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+  {
+   id: 114,
+   question: "Negotiating is communicating. A golden rule to keep in mind before beginning any communication in a negotiation is:",
+   options: [
+     "The message you intend to send is not necessarily that which is perceived by the receiver.",
+     "The message you intend to send must be transmitted in a clear and precise voice.",
+     "The message you decide to transmit is not necessarily perceived as an intended message.",
+   ],
+   correctAnswers: [0],
+   type: "single"
+  },
+  {
+   id: 115,
+   question: "When you begin to plan what coalitions you might build in the negotiation, which two angles should you take into account?",
+   options: [
+     "Which partners are strongly or weakly in agreement with your objectives?",
+     "What is the quality of the existing trust/relationship?",
+     "Which partners are my obvious friends and which are my obvious foes?",
+     "Which partners are strongest at the table?",
+   ],
+   correctAnswers: [0, 1],
+   type: "multiple"
+  },
+  {
+   id: 116,
+   question: "Among the actions listed below, which one should you take when faced with the 'ultimatum' tactic your opposite might use?",
+   options: [
+     "Re-orient your opposite to the points initially agreed or gain time to assess the meaning and cost of the new item.",
+     "Resist hasty reaction, compare with your best solution away from the table, thank your opposite, and propose a higher figure than your Plan B as your own last offer.",
+     "Remain calm, do not give way to pressure, do not mix the People and the Problem, stick to facts and rules, and leave if your Plan B enables it.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+  {
+   id: 117,
+   question: "Which statement is right?",
+   options: [
+     "In an age of globalization, culture has become a vestige of the past.",
+     "When negotiating with someone from a different culture, I have to pay attention to the various ways in which my interlocutor conveys what he or she thinks of his/her positions.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+  {
+   id: 118,
+   question: "Which of these statements are true?",
+   options: [
+     "Spanish negotiators from the IMF have an advantage over Indian negotiators working for the UN.",
+     "A negotiator's style is mostly influenced by his professional occupation.",
+     "A 'typical Chinese' negotiator is a stereotype that a trained negotiator avoids carefully.",
+     "We resort to visible cultural traits to summarize an individual, and most of the time, Brazilians behave like Brazilians.",
+   ],
+   correctAnswers: [1, 2],
+   type: "multiple"
+  },
+  {
+   id: 119,
+   question: "Based on Dr Hofstede's profiling of cultures, what is the correct definition of his 'power distance index'?",
+   options: [
+     "A measurement of the distance with which members of a society are comfortable based on hierarchical position.",
+     "The PDI accounts for the way members within a society accept and expect power and authority to be distributed and therefore how decisions are made.",
+     "The PDI indicates how much hierarchy weighs in decision-making. When PDI is low, hierarchy predominates.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+  {
+   id: 120,
+   question: "Hofstede's cultural classification helps understand hidden cultural complexity. Which statements ring true?",
+   options: [
+     "You win, you lose, that is life. Chinese and American cultures do not mind taking risks because they have a very short-term view.",
+     "Culturally-expressed preferences can come from radically different historical sources; Chinese and American low risk aversion may stem from different histories.",
+     "France is relatively risk-averse; French planning and risk prevention are embodied in social welfare institutions.",
+   ],
+   correctAnswers: [1, 2],
+   type: "multiple"
+  },
+  {
+   id: 121,
+   question: "Choose the statement that best describes what Earley means by 'the physical element of cultural intelligence'.",
+   options: [
+     "Cultures are expressed through shared verbal and nonverbal signifiers; cultural intelligence implies familiarity with these means of transmitting information.",
+     "It means capacity to survive physically.",
+     "Adopting a traditional dress code shows very high physical cultural intelligence.",
+   ],
+   correctAnswers: [0],
+   type: "single"
+  },
+  {
+   id: 122,
+   question: "Someone with high cultural intelligence would be best described by which statement?",
+   options: [
+     "Someone able to suspend judgement and analyse whether behaviour depends on personalities, a specific group trait, or broader cultural attributes.",
+     "An individual able to understand and be understood in various cultural settings.",
+     "A person who studied extensively how to negotiate and have his/her point accepted.",
+   ],
+   correctAnswers: [0],
+   type: "single"
+  },
+  {
+   id: 123,
+   question: "What use does a negotiator have for cultural intelligence in a culturally-different setting?",
+   options: [
+     "Knowledge is power: impress your counterpart by telling them you have been to his country.",
+     "It helps carefully assess negotiation strategy and sequencing based on understanding the counterpart's cultural profile, avoiding obvious mistakes.",
+     "It increases self-confidence for the financial obligations part of negotiation.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+  {
+   id: 124,
+   question: "Negotiators from monochronic cultures tend to:",
+   options: [
+     "Be comfortable with a high flow of information.",
+     "Rely on specific, detailed and explicit communication.",
+     "Take breaks when it seems appropriate.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+  {
+   id: 125,
+   question: "What should a negotiator do when negotiating with polychronic negotiators?",
+   options: [
+     "Taking time commitments seriously.",
+     "Spending time getting acquainted with the other party.",
+     "Paying a lot of attention to the agenda of a negotiation.",
+     "Building long-term relationships.",
+   ],
+   correctAnswers: [1, 3],
+   type: "multiple"
+  },
+  {
+   id: 126,
+   question: "When preparing for negotiation with a negotiator from a culture a priori different from yours, what would you be well-advised to do?",
+   options: [
+     "Read up on national culture to sound sensitive.",
+     "Check yourself: what do you think a typical individual from that culture would be like? Are you certain your assumptions are correct?",
+     "Work on your notes, know your file, rehearse your arguments. A negotiator is a negotiator after all.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
+  {
+   id: 127,
+   question: "You prepared for negotiation with Japanese counterparts based on high-context negotiation in Asia, but a last-minute check requires reassessment. What news derailed your plan?",
+   options: [
+     "The Japanese counterpart's company was acquired by another Japanese challenger.",
+     "Each counterpart's team member attended a business school in France and graduated last year.",
+     "You were about to forget your preparation notes on your desk.",
+   ],
+   correctAnswers: [1],
+   type: "single"
+  },
 ];
