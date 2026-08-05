@@ -1,7 +1,7 @@
 let currentExamQuestions = [];
 let currentIndex = 0;
 let userAnswers = {};
-const QUESTIONS_PER_EXAM = 101;
+const QUESTIONS_PER_EXAM = 127;
 
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof questionBank !== "undefined") {
