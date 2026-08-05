@@ -1252,7 +1252,7 @@ const questionBank = [
    type: "single"
   },
     {
-   id: 110,
+   id: 111,
    question: "You notice that the lighting is poor and the noise from outside is making things difficult to follow. What do you do?",
    options: [
      "Ask people to begin speaking loudly, even if it means shouting.",
@@ -1263,7 +1263,7 @@ const questionBank = [
    type: "single"
   },
    {
-   id: 111,
+   id: 112,
    question: "When preparing your process, which one of the following is not one of the classifications of motivations you should take into account?",
    options: [
      "Motivations shared by both parties and compatible between them.",
@@ -1275,7 +1275,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 112,
+   id: 113,
    question: "Among the following statements, which are correct in negotiation?",
    options: [
      "In negotiation, you should know how to evaluate before deciding.",
@@ -1288,7 +1288,7 @@ const questionBank = [
    type: "multiple"
   },
   {
-   id: 113,
+   id: 114,
    question: "A negotiation does not imply an agreement. You therefore have to check the dimensions of the negotiation before commitment. In the 'Problem' dimension, which of the following statements is wrong?",
    options: [
      "Check that the agreement integrates the motivations of the different parties.",
@@ -1300,7 +1300,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 114,
+   id: 115,
    question: "Negotiating is communicating. A golden rule to keep in mind before beginning any communication in a negotiation is:",
    options: [
      "The message you intend to send is not necessarily that which is perceived by the receiver.",
@@ -1311,7 +1311,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 115,
+   id: 116,
    question: "When you begin to plan what coalitions you might build in the negotiation, which two angles should you take into account?",
    options: [
      "Which partners are strongly or weakly in agreement with your objectives?",
@@ -1323,7 +1323,7 @@ const questionBank = [
    type: "multiple"
   },
   {
-   id: 116,
+   id: 117,
    question: "Which statement is right?",
    options: [
      "In an age of globalization, “culture” has become a vestige of the past that is expressed most clearly in areas such as national cuisine and traditional costume. Other than that, we all belong to a mostly globalized culture.",
@@ -1333,7 +1333,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 117,
+   id: 118,
    question: "Which of these statements are true?",
    options: [
      "Spanish negotiators from the IMF have an advantage over Indian negotiators working for the UN.",
@@ -1345,7 +1345,7 @@ const questionBank = [
    type: "multiple"
   },
   {
-   id: 118,
+   id: 119,
    question: "Based on your understanding of Dr Hofstede’s profiling of cultures, what is to you the correct definition of his “power distance index”?",
    options: [
      "The PDI is a measurement, across different cultures, of the distance with which members of a society are comfortable based on their hierarchical position.",
@@ -1356,7 +1356,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 119,
+   id: 120,
    question: "Hofstede’s view of cultural classification criteria enables students of cross-cultural negotiations to get a deeper understanding of what shapes a foreign negotiator’s preferences, tactics and sets of attitudes at the table. When one looks ‘under the water level of the iceberg of culture’, one can discover the hidden complexities of culture. Among the following statements, which ones ring true to you ?",
    options: [
      "You win, you lose, that’s life. Members of Chinese and American cultures do not mind taking risks because they have a very short term view and do not consider the future or the past to be important.",
@@ -1367,7 +1367,7 @@ const questionBank = [
    type: "multiple"
   },
   {
-   id: 120,
+   id: 121,
    question: "Choose the statement that best describes what Earley means by 'the physical element of cultural intelligence'.",
    options: [
      "Cultures are expressed through a set of shared verbal and nonverbal signifiers through which a group of people communicate. Therefore, cultural intelligence implies a high degree of familiarity with verbal and nonverbal means of transmitting information.",
@@ -1378,7 +1378,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 121,
+   id: 122,
    question: "Someone with high cultural intelligence would be best described by which of the following statements:",
    options: [
      "Someone with a sharpened cultural intelligence is able to suspend his judgement and analyse a behavior or interaction to determine whether it depends on personalities, a specific group trait or more largely a group’s cultural attributes.",
@@ -1389,7 +1389,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 122,
+   id: 123,
    question: "What use does a negotiator have for cultural intelligence in a culturally-different setting?",
    options: [
      "Knowledge is power: impress your counterpart by telling them you’ve been to his country.",
@@ -1400,7 +1400,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 123,
+   id: 124,
    question: "Negotiators from monochronic cultures tend to:",
    options: [
      "Be comfortable with a high flow of information.",
@@ -1411,7 +1411,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 124,
+   id: 125,
    question: "What should a negotiator do when negotiating with polychronic negotiators?",
    options: [
      "Taking time commitments seriously.",
@@ -1423,7 +1423,7 @@ const questionBank = [
    type: "multiple"
   },
   {
-   id: 125,
+   id: 126,
    question: "When preparing for your next negotiation with a negotiator from a culture, a priori different from yours, what would you be well-advised to do?",
    options: [
      "Read-up on his or her national culture to sound sensitive. Are you certain you’re up-to-date on his/her country’s main traits?",
@@ -1434,7 +1434,7 @@ const questionBank = [
    type: "single"
   },
   {
-   id: 126,
+   id: 127,
    question: "Images and reality can sometimes suffer when they meet each other. You’ve been getting ready for this negotiation with your Japanese counterparts for a long time. You even followed specific training on “how to negotiate in Asia” at ESSEC. But, after a last minute check, your strategy has to be reassessed. What type of news derailed your well-thought plan?",
    options: [
      "Your Japanese counterpart’s company was just acquired by another japanese challenger.",
