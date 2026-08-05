@@ -1164,7 +1164,7 @@ const questionBank = [
       "We always tend to assume that the other side is stronger than us.",
       "We naturally tend to think that negotiation is only, and always, pure competition and that the objective is to win against the other.",
     ],
-    correctAnswers: [1, 4],
+    correctAnswers: [1, 3],
     type: "multiple"
   },
   {
