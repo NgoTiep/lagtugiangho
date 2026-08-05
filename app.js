@@ -109,7 +109,7 @@ function submitExam() {
   });
 
   const percentage = Math.round((score / currentExamQuestions.length) * 100);
-  const passed = percentage >= 70;
+  const passed = percentage >= 99;
 
   // 2. Chuyển thẻ giao diện
   document.getElementById("quiz-card").classList.add("hidden");
@@ -122,7 +122,7 @@ function submitExam() {
     scoreBox.innerHTML = `
       <h2>${passed ? "🎉 PASSED!" : "❌ FAILED"}</h2>
       <p>Your Score: <b>${score}/${currentExamQuestions.length}</b> (${percentage}%)</p>
-      <p>Pass Grade: 70%</p>
+      <p>Pass Grade: 99%</p>
     `;
   }
 
